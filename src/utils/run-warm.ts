@@ -1,7 +1,6 @@
 type LambdaFn = (event: any, context: any, callback: any) => any;
 
 const runWarm = (lambdaFunc: LambdaFn): AWSLambda.Handler => (event, context, cb): any => {
-  console.log('running warm');
   if (event.source === 'serverless-plugin-warmup') {
     console.log('Function warmed up.');
     return 'pinged';
