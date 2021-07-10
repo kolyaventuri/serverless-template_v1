@@ -57,11 +57,13 @@
     },
     "rules": {
       "@typescript-eslint/camelcase": 0,
-      "@typescript-eslint/member-naming": [
+      "@typescript-eslint/naming-convention": [
         "error",
         {
-          "private": "^__",
-          "protected": "^_"
+          "selector": "memberLike",
+          "modifiers": ["private"],
+          "format": ["camelCase"],
+          "leadingUnderscore": "requireDouble"
         }
       ],
       "indent": 0,
