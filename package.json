@@ -33,7 +33,7 @@
     }
   },
   "lint-staged": {
-    "*": [
+    "*.{ts,tsx,js,jsx}": [
       "xo --fix"
     ]
   },
