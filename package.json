@@ -14,7 +14,8 @@
     "test:unit": "cross-env TS_NODE_PROJECT=tsconfig.ava.json ava",
     "lint:tsc": "tsc --noEmit",
     "lint:lint": "xo --fix",
-    "build": "sls webpack"
+    "build": "sls webpack",
+    "postinstall": "husky install"
   },
   "repository": {
     "type": "git",
