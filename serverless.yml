@@ -1,14 +1,15 @@
 service: serverless-template
+useDotenv: true
 
 package:
   individually: true
 
 provider:
   name: aws
-  runtime: nodejs12.x
+  runtime: nodejs14.x
   region: us-west-2
-  profile: "<AWS_PROFILE>"
-  role: "arn:aws:iam::<AWS_ID>:role/<ROLE>"
+  profile: "${env:AWS_PROFILE}"
+  role: "arn:aws:iam::${env:AWS_ID}:role/${env:AWS_ROLE}-${self:provider.stage}"
   stage: ${opt:stage, 'dev'}
   logRetentionInDays: ${self:custom.logs.retention.${self:provider.stage}, 7}
   environment:
