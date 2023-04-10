@@ -1,3 +1,6 @@
+# DEPRECATION NOTICE
+This template has been superceded by [serverless-template](https://github.com/kolyaventuri/serverless-template)
+
 # Serverless Template
 _Template repository for Serverless AWS Lambda apps using the Serverless Framework_
 
